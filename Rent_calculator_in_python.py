@@ -9,4 +9,4 @@ charge_per_unit = int(input("enter the charge per unit: "))
 total_bill = (rent * months) + food + (electricity_spend * charge_per_unit)
 bill_per_person = total_bill / person
 
-print("Total bill per person in one month is: ", bill_per_person)
+print("Total bill per person is: ", bill_per_person)
