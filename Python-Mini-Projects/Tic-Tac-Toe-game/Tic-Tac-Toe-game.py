@@ -10,11 +10,11 @@ def check_winner():
             
             
             for i, cell in enumerate(cells):
-                if cell["text"] != "":  # only colored cells that were played
+                if cell["text"] != "":  
                     if i in winning_indices:
-                        cell.config(bg="green", fg="white")   # winner cells → green
+                        cell.config(bg="green", fg="white")   
                     else:
-                        cell.config(bg="red", fg="white")     # loser cells → red
+                        cell.config(bg="red", fg="white")    
 
             root.update()
             root.after(300, lambda p=buttons[combo[0]]["text"]: show_winner(p))
@@ -60,7 +60,7 @@ for i in range(9):
     lbl.bind("<Button-1>", lambda e, idx=i: cell_click(idx))
     cells.append(lbl)
 
-buttons = cells  # alias so check_winner() works unchanged
+buttons = cells  
 
 current_player = "X"
 winner = False
