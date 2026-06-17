@@ -20,8 +20,6 @@ def check_winner():
             root.after(300, lambda p=buttons[combo[0]]["text"]: show_winner(p))
             return
         
-            
-
 def show_winner(player):
     messagebox.showinfo("Tic-Tac-Toe", f"Player {player} wins!")
     root.quit()
